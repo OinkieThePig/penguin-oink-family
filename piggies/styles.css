@@ -1,0 +1,278 @@
+/*  */
+:root {
+  --header-height: 80px; /* set this to your real header height */
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 12px);
+  scroll-behavior: smooth; /* optional */
+  font-size: 16px;
+font-family: "Quicksand", sans-serif;
+background-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* CUSTOM COLORS:
+    - #fe7f9c - watermelon pink 
+    - #3a3a3a - dark black gray stuff    
+*/
+/* HEADER - section */
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    align-content: center;
+    background-color: white;
+    top: 0;
+    z-index: 100;
+    /* border-bottom: 4px solid #fe7f9c; */
+    /* box-shadow: hsla(0, 0%, 23%, 0.5) 0px 3px; */
+}
+
+header nav {
+    /* border: 5px solid rebeccapurple; */
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul {
+    /* border: 2px solid red; */
+
+
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+header h1 a {
+    /* border: 2px solid black; */
+     
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    background-image: url("/piggies/resources/img/miniso-pigs-home-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    /* height: 8%; */
+}
+
+header nav h1 {
+    /* border: 2px solid rebeccapurple; */
+    
+    /* font-size: 1.5rem;
+    color: #3a3a3a; */
+    
+    height: 4rem;
+    width: 4rem;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3a3a3a;
+    transition: color 1s;
+}
+
+header nav ul li a:hover {
+    color: #fe7f9c;
+}
+
+/* MAIN - #banner */
+main #banner {
+    /* border: 4px solid #fe7f9c; */
+    box-shadow: 0px 10px 100px #fe7f9c;
+
+    height: 35rem;
+    width: 75%;
+
+    margin: 0 auto;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    background-image: url("/piggies/resources/img/piggies-banner.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main #banner-text {
+    /* border: 4px solid #fe7f9c; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 17.5rem;
+    background-color: #fe7f9c;
+}
+
+main #banner-text div {
+    border: 1.5px solid white;
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+main #banner-text p {
+    /* border: 5px solid black; */
+
+    font-family: "Playwrite AU NSW", cursive;
+    color: white;
+    font-weight: 850;
+    text-align: center;
+    width: 70%;
+    font-size: 1.25rem;
+    overflow: hidden;
+}
+
+main #banner-text h2 {
+    color: white;
+}
+
+/* #portofolio */
+main #portofolio .flex-col {
+    /* border: 5px solid black; */
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 10rem;
+}
+
+main #portofolio h2 {
+    text-decoration: underline;
+    color: #3a3a3a;
+    margin: 4rem 0;
+    text-align: center;
+}
+
+main #portofolio .flex-col .column  {
+}
+
+main #portofolio .flex-col .column .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    border-radius: 20px;
+}
+
+main #portofolio .flex-col .column .item img {   
+    height: 20rem;
+    width: 20rem; 
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 0px 25px #fe7f9c;
+}
+
+main #portofolio .flex-col .column .item img:hover {   
+    box-shadow: none;
+}
+
+/* Shadow over each image with text over it */
+main #portofolio .flex-col .column .item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0); /* transparent by default */
+  transition: background 0.3s ease;
+  border-radius: 20px;
+}
+
+main #portofolio .flex-col .column .item::before {
+  content: attr(data-name); /* uses a data-name from HTML */
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 10;
+}
+
+main #portofolio .flex-col .column .item:hover::after {
+  background: rgba(0,0,0,0.6); /* dark overlay on hover */
+}
+
+main #portofolio .flex-col .column .item:hover::before {
+  opacity: 1; /* text fades in */
+}
+
+/* INVESTORS TEAM */
+main #team {
+    background-color: #fe7f9c;
+    height: 50rem;
+    margin-top: 4rem;
+}
+
+main #team h2 {
+    padding-top: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+
+main #team .investors {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+main #team .investors .person img {
+    height: 20rem;
+    width: 20rem; 
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+main #team .investors .person {
+    /* border: 2px solid rebeccapurple; */
+    width: 320px;
+}
+
+main #team .investors .person p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: "Playwrite AU NSW", cursive;
+    color: white;
+    font-weight: 650;
+}
+
+/* FOOTER */
+
+footer #contact {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+footer #contact span, i {
+    color: #fe7f9c;
+    text-decoration: underline;
+}
+

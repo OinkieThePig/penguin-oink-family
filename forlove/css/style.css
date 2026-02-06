@@ -1,0 +1,200 @@
+/*  */
+:root {
+  --header-height: 80px; /* set this to your real header height */
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 12px);
+  scroll-behavior: smooth; /* optional */
+  font-size: 16px;
+  background-color: seashell;
+}
+
+/* reset */
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
+/* header design */
+header {
+    position: fixed;
+    background-color: #b5e2ff;
+    border-bottom: 2px solid black;
+    max-width: 100%;
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav a:hover {
+    transition: 2s color;
+    color: #2e111a;
+}
+
+header nav a img {
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 10px 0px;
+    background-color: #ffc1cc;
+}
+
+header nav a span {
+    font-family: "Borel", cursive;
+    line-height: 0px;
+    font-size: 2.25rem;
+}
+
+/* main styling */
+main {
+    padding-top: 7.5rem;
+}
+
+main #ads {}
+
+main #ads #ad1 {
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 75%;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    background-color: #e8f0fa;;
+}
+
+/* background-color: #ffe9ef;
+background-color: #e8f0fa; */
+main #ads #ad1 a {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    background-color: #ffc1cc;
+    transition: all 1s ease-in-out;
+}
+
+main #ads #ad1 a:hover {
+    transition: all 1s ease-in-out;
+    color: #ffc1cc;
+    background-color: black;
+    border-color: #ffc1cc;
+}
+
+main #ads #ad2 {
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 75%;
+    justify-self: center;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #ffe9ef;
+}
+
+main #ads #ads2 video {
+    /* width: 220px !important;      ← pick your size */
+    height: auto;      /* keep proportions */
+    border-radius: 12px;
+}
+
+main #ads #ad2 div {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+main #ads #ad2 div img {
+    width: 400px;
+}
+
+/* the month part blogg */
+
+main #month {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #e8f0fa;
+    max-width: 100%;
+    width: 75%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* main #month #blogg  {
+    display: grid;
+    grid: repeat(5, 60px) / auto-flow 80px;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    justify-self: center;
+} */
+
+/* main #month #blogg {
+  display: grid;
+  grid-template-columns: repeat(6, 80px); 
+  grid-template-rows: repeat(5, 60px);    
+  gap: 1rem 4rem;                         
+  margin: 4rem 0;
+  justify-content: center;
+} */
+
+main #month #blogg {
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  grid-auto-rows: 60px;
+  gap: 1rem 4rem;
+  margin: 4rem 0;
+  justify-content: center;
+}
+
+/* tablets */
+@media (max-width: 900px) {
+  main #month #blogg {
+    grid-template-columns: repeat(4, 80px);
+    gap: 1rem 2rem;
+  }
+}
+
+/* phones */
+@media (max-width: 520px) {
+  main #month #blogg {
+    grid-template-columns: repeat(3, 80px);
+    gap: 1rem 1.5rem;
+  }
+}
+
+main #month #blogg > a {
+  background-color: #392a48;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: seashell;
+  text-decoration: none;
+}

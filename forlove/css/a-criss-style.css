@@ -1,0 +1,52 @@
+/*  */
+:root {
+  --header-height: 80px; /* set this to your real header height */
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 12px);
+  scroll-behavior: smooth; /* optional */
+  background-color: seashell;
+  font-size: 16px;
+}
+
+/* main styling */
+main 
+h1, h2, h3, h4, 
+ol,
+p {
+    margin-bottom: 2rem;
+}
+
+main h4 {
+    margin-top: 0.5rem;
+}
+
+main section ol {
+    list-style-type: decimal;
+}
+
+main #plan {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 75%;
+}
+
+main #plan article {
+    /* margin: 0 1rem; */
+    padding: 0 1rem;
+}
+
+/* background-color: #ffe9ef;
+background-color: #e8f0fa; */
+main #plan #love-god, #family, #language, #this-year {
+    background-color: #e8f0fa;
+}
+
+main #plan #plan-list, #independent, #miralda, #our-relationship, #grow {
+    background-color: #ffe9ef;
+}
