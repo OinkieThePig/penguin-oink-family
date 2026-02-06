@@ -57,7 +57,7 @@ header h1 a {
     display: block;
     height: 4rem;
     width: 4rem;
-    background-image: url("/piggies/resources/img/miniso-pigs-home-logo.png");
+    background-image: url("./resources/img/miniso-pigs-home-logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -104,7 +104,7 @@ main #banner {
     margin-top: 6rem;
     margin-bottom: 4rem;
     border-radius: 2rem;
-    background-image: url("/piggies/resources/img/piggies-banner.jpeg");
+    background-image: url("./resources/img/piggies-banner.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -275,4 +275,5 @@ footer #contact span, i {
     color: #fe7f9c;
     text-decoration: underline;
 }
+
 
