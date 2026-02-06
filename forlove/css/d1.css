@@ -2,9 +2,11 @@ main #independent img {
     margin-top: 2rem;
     width: 350px; 
     height: 350px;
+    border-radius: 20px;
 }
 
 main #independent div {
     display: flex;
     justify-content: space-around;
+
 }
